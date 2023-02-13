@@ -1,0 +1,187 @@
+<head>
+    <title>MP2 Echoes Tracker</title>
+    <link rel="stylesheet" type="text/css" href="css\css.css">
+    <script src="js\jquery-2.1.3.min.js"></script>			
+    <script src="js/music.js"></script>	
+    <script src="js/js.js"></script>	
+    <link rel="shortcut icon" href="img/ico.ico"/>
+
+</head>
+
+<body>
+    <div id = 'main'>
+        <div id = 'bg_limit'></div>
+
+
+
+        <div id = 'items_container'>
+            <div class = 'item_row1'>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/light_beam.png'></img>
+                    <div class = "item_text">Light Beam</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/dark_beam.png'></img>
+                    <div class = "item_text">Dark Beam</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/annihilator_beam.png'></img>
+                    <div class = "item_text">Annihilator</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/sunburst.png'></img>
+                    <div class = "item_text">Sunburst</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/dark_burst.png'></img>
+                    <div class = "item_text">Darkburst</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/sonic_boom.png'></img>
+                    <div class = "item_text">Sonic Boom</div>
+                </div>
+            </div>
+            <div class = 'item_row2'>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/morph_ball_bomb.png'></img>
+                    <div class = "item_text">Morph Bomb</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/power_bomb.png'></img>
+                    <div class = "item_text">Power Bomb</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/missile_launcher.png
+                    '></img>
+                    <div class = "item_text">Missile L.</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/super_missile.png'></img>
+                    <div class = "item_text">Super M.</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/seeker_launcher.png'></img>
+                    <div class = "item_text">Seeker L.</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/dark_suit.png'></img>
+                    <div class = "item_text">Dark Suit</div>
+                </div>
+
+           </div>
+           <div class = 'item_row3'>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/space_jump_boots.png'></img>
+                    <div class = "item_text">Space Jump</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/boost_ball.png'></img>
+                    <div class = "item_text">Boost Ball</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/spider_ball.png'></img>
+                    <div class = "item_text">Spider Ball</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/grapple_beam.png'></img>
+                    <div class = "item_text">Grapple B.</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/screw_attack.png'></img>
+                    <div class = "item_text">Screw Atk.</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/light_suit.png'></img>
+                    <div class = "item_text">Light Suit</div>
+                </div>
+
+            </div>
+            <div class = 'item_row4'>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/dark_visor.png'></img>
+                    <div class = "item_text">Dark Visor</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/echo_visor.png'></img>
+                    <div class = "item_text">Echo Visor</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/violet_translator.png
+                    '></img>
+                    <div class = "item_text">Violet</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/amber_translator.png'></img>
+                    <div class = "item_text">Amber</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/emerald_translator.png'></img>
+                    <div class = "item_text">Emerald</div>
+                </div>
+                <div class = 'item_entry'>
+                    <img class = 'icon' src = 'img/cobalt_translator.png'></img>
+                    <div class = "item_text">Cobalt</div>
+                </div>
+            </div>
+            <div class = 'item_row5'>
+                <div class = 'item_entry'>
+                    
+                </div>
+                <div class = 'item_entry'>
+                    <div class = 'key_icon_container'><img class = 'icon' src = 'img/dark_agon_key.png' id = 'dark_agon_key'></img><div class = 'key_counter'>0</div></div><div class = "item_text">Agon</div>
+                    
+                </div>
+                <div class = 'item_entry'>
+                    <div class = 'key_icon_container'><img class = 'icon' src = 'img/dark_torvus_key.png' id = 'dark_torvus_key'></img><div class = 'key_counter'>0</div></div>
+                    <div class = "item_text">Torvus</div>
+                </div>
+                <div class = 'item_entry'>
+                    <div class = 'key_icon_container'><img class = 'icon' src = 'img/ing_hive_key.png' id = 'ing_hive_key'></img><div class = 'key_counter'>0</div></div>
+                    <div class = "item_text">Ing Hive</div>
+                </div>
+                <div class = 'item_entry'>
+                    <div class = 'key_icon_container'><img class = 'icon' src = 'img/sky_temple_key.png' id = 'sky_temple_key'></img><div class = 'key_counter'>0</div></div>
+                    <div class = "item_text">Temple</div>
+                </div>
+
+
+
+                <div class = 'item_entry'>
+                    
+                </div>
+            </div>
+
+        </div>
+        
+        
+        
+        
+        <div id = 'log_container'>
+        <!-- <div id = 'log_header'>Log:</div> -->
+            <div id = 'log_entries_container'>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <input type="text" id="entry" name="entry">
+        <div id = 'last_entry-button'>&#8634;</div>
+        
+        <div id = 'clear-button'>Clear full log</div>
+        <div id = 'hide-show-log'>Hide auto log</div>
+        <div id = 'clear-text'>Double click to clear log lines</div>
+        <div id = 'clear-text2'>Chrome capture OBS, crop: top 60, bottom 210 (or 168)</div>
+        
+        <div id = 'settings'>
+            <div id = 'update_log_div' >
+                <input type="checkbox" id="setting_update_log" checked></input>
+                Log automatically updates
+            </div>
+        </div>
+    </div>
+
+</body>
