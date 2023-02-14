@@ -40,7 +40,7 @@ Examples:
 
 Examples:  
 `stk 3 dark_agon` will add "Sky Temple Key #3 in Dark Agon" to the log  
-`stk 7 torvus great_bridge` will add "Sky Temple Key #7 in Dark Agon" to the log
+`stk 7 torvus great bridge` will add "Sky Temple Key #7 in Torvus Bog - great bridge" to the log
 
 
 
