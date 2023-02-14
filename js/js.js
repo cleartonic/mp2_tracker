@@ -28,7 +28,7 @@ function toTitleCase(str) {
 var items = $('img')
 $.each( $('img'), function(idx) {
     img = items[idx];
-    $(img).css("opacity",".3");
+    $(img).css("opacity",".2");
     });
 
 var dungeon_list = ['???','Deku','Dodongo','Jabu','Forest','Fire','Water','Shadow','Spirit','Free']
@@ -203,6 +203,10 @@ var key_dict = {
 
 
 function toggle_image(cur_div, loc_str = '', num_keys = undefined) {
+        var text = $(cur_div).next();
+        
+        
+        
         var img_path = $(cur_div).attr('src');
         var cur_opacity = $(cur_div).css("opacity");
         
@@ -341,9 +345,12 @@ function toggle_image(cur_div, loc_str = '', num_keys = undefined) {
         
             if (cur_opacity < 1) {
                 $(cur_div).css("opacity","1");
+                console.log("Check")
+
             }
             else{
                 $(cur_div).css("opacity",".3"); 
+
                 latest_item_from_path = undefined;                
             }
         }    
@@ -545,7 +552,7 @@ $(function() {
             var cur_text = parseInt($(this).text());
             
             if (cur_text >= key_limit){
-                img_div.css("opacity",".3");
+                img_div.css("opacity",".2");
                 $(this).text("0");
                 $(this).css("opacity","0")
                 latest_item_from_path = undefined;  
