@@ -65,6 +65,10 @@ var item_dict = {
     "screwattack" : "screw_attack",
     "screw" : "screw_attack",
     "darksuit" : "dark_suit",
+    "suit" : "dark_suit",
+    "progressivesuit" : "dark_suit",
+    "progressive_suit" : "dark_suit",
+    
 
     "power_bomb" : "power_bomb",
     "power" : "power_bomb",
@@ -82,6 +86,9 @@ var item_dict = {
     "jump" : "space_jump_boots",
     "light_suit" : "light_suit",
     "lightsuit" : "light_suit",
+    "gravity_boost" : "gravity_boost",
+    "gravityboost" : "gravity_boost",
+    "gravity" : "gravity_boost",
 
     "dark_visor" : "dark_visor",
     "echo_visor" : "echo_visor",
@@ -150,13 +157,14 @@ var item_cleanup_dict = {
     "super_missiles" : "Super Missile",    
     "super_missile" : "Super Missile",    
     "seeker_launcher" : "Seeker Launcher",    
-    "dark_suit" : "Dark Suit",
+    "dark_suit" : "Progressive Suit",
     "space_jump_boots" : "Space Jump Boots",
     "boost_ball" : "Boost Ball",
     "spider_ball" : "Spider Ball",
     "grapple_beam" : "Grapple Beam",
     "screw_attack" : "Screw Attack",
-    "light_suit" : "Light Suit",
+    "light_suit" : "Progressive Suit",
+    "gravity_boost" : "Gravity Boost",    
     "dark_visor" : "Dark Visor",
     "echo_visor" : "Echo Visor",
     "violet_translator" : "Violet Translator",
@@ -213,88 +221,23 @@ function toggle_image(cur_div, loc_str = '', num_keys = undefined) {
         
         latest_item_from_path = img_path.split("/")[1].split('.')[0];
         
-        // check each image 
+
         
-        // STRENGTH
-        if (img_path == "img/lift1.png") {
+        // SUIT
+        if (img_path == "img/dark_suit.png") {
             if (cur_opacity < 1) {
                 $(cur_div).css("opacity","1");
             }
             else{
-                $(cur_div).attr("src","img/lift2.png");    
-                latest_item_from_path = 'lift2'
-            }
-        }
-        else if (img_path == "img/lift2.png") {
-            $(cur_div).attr("src","img/lift3.png");    
-            latest_item_from_path = 'lift3'
-        }
-        else if (img_path == "img/lift3.png") {
-            $(cur_div).attr("src","img/lift1.png");  
-            $(cur_div).css("opacity",".3");      
-            latest_item_from_path = undefined;
-        }
-        
-        // OCARINA
-        else if (img_path == "img/fairyocarina.png") {
-            if (cur_opacity < 1) {
-                $(cur_div).css("opacity","1");
-            }
-            else{
-                $(cur_div).attr("src","img/ocarina.png");    
+                $(cur_div).attr("src","img/light_suit.png");    
             }    
         }
-        else if (img_path == "img/ocarina.png") {
-            $(cur_div).attr("src","img/fairyocarina.png");  
+        else if (img_path == "img/light_suit.png") {
+            $(cur_div).attr("src","img/dark_suit.png");  
             $(cur_div).css("opacity",".3");      
             latest_item_from_path = undefined;
         }
-        
-        // SCALE
-        else if (img_path == "img/scale1.png") {
-            if (cur_opacity < 1) {
-                $(cur_div).css("opacity","1");
-            }
-            else{
-                $(cur_div).attr("src","img/scale2.png");    
-            }    
-        }
-        else if (img_path == "img/scale2.png") {
-            $(cur_div).attr("src","img/scale1.png");  
-            $(cur_div).css("opacity",".3");      
-            latest_item_from_path = undefined;
-        }
-        
-        // BOTTLE/LETTER
-        else if (img_path == "img/bottle.png") {
-            if (cur_opacity < 1) {
-                $(cur_div).css("opacity","1");
-            }
-            else{
-                $(cur_div).attr("src","img/bottle-letter.png");    
-            }    
-        }
-        else if (img_path == "img/bottle-letter.png") {
-            $(cur_div).attr("src","img/bottle.png");  
-            $(cur_div).css("opacity",".3");      
-            latest_item_from_path = undefined;
-        }        
-        
-        // HOOKSHOT
-        else if (img_path == "img/hookshot.png") {
-            if (cur_opacity < 1) {
-                $(cur_div).css("opacity","1");
-            }
-            else{
-                $(cur_div).attr("src","img/longshot.png");    
-            }    
-        }
-        else if (img_path == "img/longshot.png") {
-            $(cur_div).attr("src","img/hookshot.png");  
-            $(cur_div).css("opacity",".3");      
-            latest_item_from_path = undefined;
-        }        
-        
+
         // SMALLKEY
         else if (img_path == "img/dark_agon_key.png" || img_path == "img/dark_torvus_key.png" || img_path == "img/ing_hive_key.png" || img_path == "img/sky_temple_key.png") {
             
@@ -430,6 +373,25 @@ function clear_log_full() {
 };
 
 
+function hide_text() {
+    
+    console.log("Hide text")
+    
+    var cur_html = $(".item_text");
+    
+    $.each(cur_html, function(child) { 
+        color = $(cur_html[child]).css("display");
+        console.log(color)
+        if (color == "none") {
+            $(cur_html[child]).css("display","block");
+            }          
+        else {
+            $(cur_html[child]).css("display","none");
+        }
+        }
+    );
+};
+
 
 function hide_log_non_notes() {
     
@@ -484,7 +446,11 @@ $(function() {
         clear_log_full();
         });
     });
-
+$(function() { 
+    $('#hide-show-text').dblclick(function() {
+        hide_text();
+    });
+});
 $(function() { 
     $('#hide-show-log').dblclick(function() {
         
